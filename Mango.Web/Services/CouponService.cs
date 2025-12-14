@@ -11,7 +11,7 @@ namespace Mango.Web.Services
 			_baseService = baseService;
 		}
 		public async Task<ResponceDto?> CreateCouponAsync(CouponDto couponDto)
-		{
+		 {
 			return await _baseService.SendAsync(new RequestDto()
 			{
 				ApiType = SD.ApiType.POST,
@@ -34,7 +34,7 @@ namespace Mango.Web.Services
 			return await _baseService.SendAsync(new RequestDto()
 			{
 				ApiType = SD.ApiType.GET,
-				Url = SD.CouponAPIBase + "/api/couponAPI"
+				Url = SD.CouponAPIBase + "/api/couponAPI" 
 			});
  		}
 

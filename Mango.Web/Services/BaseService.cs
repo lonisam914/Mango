@@ -66,7 +66,7 @@ namespace Mango.Web.Services
 						return apiResponceDto;
 				}
 			}
-			catch (Exception ex)
+			catch (Exception ex) 
 			{
 				var dto = new ResponceDto
 				{
