@@ -42,8 +42,8 @@ namespace Mango.Services.CouponAPI
 
 
             app.MapControllers();
-
-            app.Run();
+			ApplyMigration();
+			app.Run();
 
             void ApplyMigration()     //if we miss adding migration it will automatically perfrom mi=gration
             {

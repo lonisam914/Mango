@@ -6,6 +6,7 @@ using Mango.Services.CouponAPI.Models.Dto;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.Intrinsics.X86;
 
 namespace Mango.Services.CouponAPI.Controllers
 {
@@ -37,7 +38,10 @@ namespace Mango.Services.CouponAPI.Controllers
 			}
 			return _responceDto;
 		}
-		 
+		//When to use First()
+		//You are 100% sure that a record must exist
+		//If no record is found, it will throw an exception
+
 		[HttpGet]
 		[Route("{id:int}")]
 		public ResponceDto Get(int id)
@@ -54,7 +58,10 @@ namespace Mango.Services.CouponAPI.Controllers
 			}
 			return _responceDto;
 		}
-
+		//When to use FirstOrDefault()
+		//Record may or may not exist
+		//You want to handle null safely
+		//No exception if record not found
 
 		[HttpGet]
 		[Route("GetByCode/{code}")]
@@ -117,6 +124,7 @@ namespace Mango.Services.CouponAPI.Controllers
 		}
 
 		[HttpDelete]
+		[Route("{id:int}")]
 		public ResponceDto Delete(int id)
 		{
 			try
