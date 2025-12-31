@@ -1,6 +1,6 @@
 ﻿using Mango.Web.Models;
 
-namespace Mango.Web.Services
+namespace Mango.Web.Services.IService
 {
 	public interface ICouponService
 	{
